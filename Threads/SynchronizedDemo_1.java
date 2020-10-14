@@ -1,38 +1,28 @@
-class Printer
-{
-	synchronized void print(String name)
-	{
-		for(int i=0;i < 5; i++)
-		{
+class Printer {
+	synchronized void print(String name) {
+		for(int i=0;i < 5; i++) {
 			System.out.print(name+" ");
-			try
-			{
+			try {
 				Thread.sleep(1000);
-			}
-			catch(InterruptedException ie)
-			{ }
+			} catch(InterruptedException ie) { }
 			System.out.println(i);
 		}
 	}
 }
-class MyThread extends Thread
-{
+
+class MyThread extends Thread {
 	Printer p;
 	String name;
-	MyThread(Printer p, String name)
-	{
+	MyThread(Printer p, String name) {
 		this.p = p;
 		this.name = name;
 	}
-	public void run()
-	{
+	public void run() {
 		p.print(name);
 	}
 }
-class SynchronizedDemo_1
-{
-	public static void main(String[] args)
-	{
+class SynchronizedDemo_1 {
+	public static void main(String[] args) {
 		Printer p1 = new Printer();
 		Printer p2 = new Printer();
 		MyThread t1 = new MyThread(p1,"Rama");
