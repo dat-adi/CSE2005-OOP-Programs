@@ -1,4 +1,3 @@
-interface MyIn2
-{
+interface MyIn2 {
 	void method4();
 }
