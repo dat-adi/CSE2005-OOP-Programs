@@ -1,26 +1,24 @@
-class CallByValNRef
-{
+class CallByValNRef {
 	int i;
 	int j;
-	CallByValNRef(int i,int j)
-	{
-	this.i=i;
-	this.j=j;
+
+	CallByValNRef(int i,int j) {
+        this.i=i;
+        this.j=j;
 	}
-	void callByValue(int i,int j)
-	{
+
+	void callByValue(int i,int j) {
 		i=i*2;
 		j=j/2;
 		System.out.println("In Call By Value:---i: "+i+" j: "+j);
 	}
-	void callByReference(CallByValNRef d)
-	{
+
+	void callByReference(CallByValNRef d) {
 		d.i=d.i*2;
 		d.j=d.j/2;
 		System.out.println("In Call By Reference:---d.i: "+d.i+" d.j:"+d.j);
 	}
-	public static void main(String ar[])
-	{
+	public static void main(String ar[]) {
 		CallByValNRef cbvr = new CallByValNRef(20,40);
 		CallByValNRef cbvr1 = new CallByValNRef(40,60);
 		int k=20,l=40;
