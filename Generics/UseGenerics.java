@@ -1,12 +1,11 @@
 class MyGen<T>
 {
     T var;
-    void  set(T var)
-    {
+    void set(T var) {
         this.var = var;
     }
-    T get()
-    {
+
+    T get() {
         return var;
     }
 }

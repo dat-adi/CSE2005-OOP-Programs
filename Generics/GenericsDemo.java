@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class GenericsDemo {
     public static void main(String args[]) {
         GenericStack<Integer> obj = new GenericStack<Integer>();
